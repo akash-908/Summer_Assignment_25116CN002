@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int start, end;
+
+    cout << "Enter starting number: ";
+    cin >> start;
+
+    cout << "Enter ending number: ";
+    cin >> end;
+
+    cout << "Armstrong Numbers are: ";
+
+    for (int num = start; num <= end; num++) {
+        int temp = num, rem, sum = 0;
+
+        while (temp > 0) {
+            rem = temp % 10;
+            sum += rem * rem * rem;
+            temp /= 10;
+        }
+
+        if (sum == num)
+            cout << num << " ";
+    }
+
+    return 0;
+}
